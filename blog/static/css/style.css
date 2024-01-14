@@ -1,0 +1,435 @@
+/* Importar iconos */
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url('fonts/websymbols-regular-webfont.eot');
+    /* formato para diferentes navegadores */
+    src: url('fonts/websymbols-regular-webfont.eot') format('embedded-opentype'),
+         url('fonts/websymbols-regular-webfont.woff') format('woff'),
+         url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+         url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+
+    font-weight: normal;
+    font-style: normal;
+}
+/* ###################################################################################### */
+/* ###################################################################################### */
+/* ###################################################################################### */
+/* Variables */
+
+:root{
+    /* COLORES */
+    --first_color: #001c4c;
+    --second_color: #003fb3;
+    --third_color: #004fff;
+    --fourth_color: #6bd8ff;
+    --contraste_color: #ff0000;
+
+}
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Barra de navegacion */
+/* ############################################## */
+/* ############################################## */
+/* ############################################## */
+.fixed-nav {
+    width: 100%;
+    height: 70px;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #F3F3F3;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    /* Anclar barra */
+    position: fixed;
+    z-index: 1000;
+}
+
+/* Flex container */
+/* .nav-menu {
+    display: flex;
+    justify-content: center;
+    line-height: 70px;
+} */
+
+.nav-item {
+    margin: 0 2rem;
+}
+
+
+.nav-link:hover {
+    border-bottom: 4px solid var(--contraste_color);
+}
+
+/* Fin barra de navegacion */
+
+
+/* ################################################################## */
+/* ################################################################## */
+/* ################################################################## */
+
+/* Inicio landig page */
+/* Div Content */
+.header {
+    display: flex;
+    width: 100%;
+    background-color: var(--first_color);
+    color: white;
+    overflow: hidden;
+}
+
+
+/* Div description */
+.description {
+    width: 50%;
+}
+
+.cubo {
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.cubo h1 {
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+    margin: 60px 0px;
+    letter-spacing: 3px;
+}
+.cubo p{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+/* Div que contiene imagen logo */
+.content-img {
+    width: 50%;
+}
+
+.cubo-img {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cubo-img img {
+    width: 350px;
+}
+
+
+
+
+/* Div content-img */
+.content-img {
+    width: 50%;
+}
+
+.landing-page-img {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.landing-page-img img {
+    width: 550px;
+    height: 600px;
+    border-radius: 15px;
+}
+
+/* ################################################################## */
+/* ################################################################## */
+/* ################################################################## */
+
+/* Articles */
+.articles{
+    width: 100%;
+    padding: 50px 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card{
+    margin: 15px;
+}
+.btn{
+    background-color: var(--second_color);
+}
+
+/* ################################################################## */
+/* ################################################################## */
+/* ################################################################## */
+
+/* Footer */
+footer{
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+    background-color: #333;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px #666;
+}
+
+
+/* footer redes sociales */
+.social{
+    display: flex;
+    justify-content: center;
+}
+.social i{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 5px 10px;
+}
+.copy{
+    background-color: black;
+}
+
+
+/* Responsive */
+/* ######################################################################## */
+/* ######################################################################## */
+/* ######################################################################## */
+/* ######################################################################## */
+
+/** dispositivos móviles en vista viewport (vertical) */
+@media (max-width: 575px) {
+
+    /* Menu hamburguesa */
+    .navbar-collapse {
+        border-radius: 15px;
+        box-shadow: 2px 0 3px black;
+        background-color: #F3F3F3;
+
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    /* contenido landing page */
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Div description */
+    .description {
+        width: 100%;
+    }
+
+    .cubo {
+        width: 95%;
+        text-align: center;
+    }
+
+    .cubo-img img {
+        width: 80%;
+    }
+
+    .cubo h1 {
+        font-size: 35px;
+    }
+
+    .cubo p {
+        font-size: 15px;
+    }
+
+    /* Div que contiene imagen */
+    .content-img {
+        width: 100%;
+        background-color: white;
+    }
+
+    .landing-page-img {
+        /* width: 100%; */
+        padding: 0px;
+    }
+
+    .landing-page-img img {
+        width: 100%;
+        height: 425px;
+        border-radius: 0px;
+    }
+}
+
+/** dispositivos pequeños en vista landscape (horizontal) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+
+    /* Menu hamburguesa */
+    .navbar-collapse {
+        border-radius: 15px;
+        box-shadow: 2px 0 3px black;
+        background-color: #F3F3F3;
+
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    /* contenido landing page */
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Div description */
+    .description {
+        width: 100%;
+    }
+
+    .cubo {
+        width: 95%;
+    }
+
+    .cubo-img img {
+        width: 80%;
+    }
+
+    .cubo h1 {
+        font-size: 35px;
+    }
+
+    .cubo p {
+        font-size: 15px;
+    }
+
+    /* Div que contiene imagen */
+    .content-img {
+        width: 100%;
+        background-color: white;
+    }
+
+    .landing-page-img {
+        /* width: 100%; */
+        padding: 0px;
+    }
+
+    .landing-page-img img {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+
+
+
+/** dispositivos medianos (tablets) */
+@media (min-width: 768px) and (max-width: 991.5px) {
+
+    /* Menu hamburguesa */
+    .navbar-collapse {
+        border-radius: 15px;
+        box-shadow: 2px 0 3px black;
+        background-color: #F3F3F3;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    /* Lannding page */
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Div description */
+    .description {
+        width: 100%;
+    }
+
+    .cubo {
+        width: 85%;
+    }
+
+    .cubo-img img {
+        width: 80%;
+    }
+
+    /* Div que contiene imagen */
+    .content-img {
+        width: 100%;
+        /* background-color: white; */
+    }
+
+
+}
+
+/** dispositivos grandes (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .header {
+        width: 100%;
+
+    }
+    /* Description */
+    .cubo h1 {
+        font-size: 45px;
+        font-family: 'Oswald', sans-serif;
+        margin: 50px 0px;
+        letter-spacing: 3px;
+    }
+
+
+    /* conten-img */
+    .content-img {
+        width: 50%;
+    }
+    
+    .landing-page-img {
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .landing-page-img img {
+        width: 465px;
+        height: 515px;
+        border-radius: 15px;
+    }
+
+    .card{
+        margin: 10px;
+    }
+}
+
+/** dispositivos extra grandes (monitores grandes, tvs) */
+@media (min-width: 1200px){
+    /* description */
+    .cubo-img img{
+        width: 400px;
+    }
+    .cubo h1{
+        font-size: 60px;
+    }
+}

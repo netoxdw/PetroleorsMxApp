@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+        {% block content %}
+        <!-- Header-->
+        <header class="header">
+            <div style="margin: 0 auto; padding: 25px; width: 60%;">
+                <h1>{{post.titulo}}</h1>
+                <p style="text-transform: capitalize;">{{ post.categoria}}</p>
+                <span>Por {{post.autor}} <br> {{ post.fecha_creacion }}</span>
+            </div>
+        </header>
+        <!-- About section-->
+        <section class="content">
+            <div style="width: 60%; margin: 0 auto; padding: 30px 10px;">
+                {{ post.contenido | safe }}
+            </div>
+
+        </section>
+    
+        {% endblock %}
+    </body>
+</html>
