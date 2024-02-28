@@ -1,0 +1,340 @@
+/* Variables */
+
+:root{
+    /* COLORES */
+    --first_color: #001c4c;
+    --second_color: #003fb3;
+    --third_color: #004fff;
+    --fourth_color: #6bd8ff;
+    --contraste_color: #ff0000;
+
+    /* Variables */
+    --h1: 'Anton', sans-serif;
+    --p: 'Quicksand', sans-serif;
+    --ul: 'Oswald', sans-serif;
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Barra de navegacion */
+/* ############################################## */
+/* ############################################## */
+/* ############################################## */
+.fixed-nav {
+    width: 100%;
+    height: 70px;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #F3F3F3;
+    font-family: var(--ul);
+    font-size: 25px;
+    /* Anclar barra */
+    position: fixed;
+    z-index: 1000;
+}
+
+
+.nav-item {
+    margin: 0 2rem;
+}
+
+
+.nav-link:hover {
+    border-bottom: 4px solid var(--contraste_color);
+}
+
+/* Fin barra de navegacion */
+
+
+/* Main encabezado */
+/* ############################################## */
+/* ############################################## */
+/* ############################################## */
+.main{
+    background: rgb(1,48,129);
+    background: linear-gradient(0deg, rgba(1,48,129,1) 1%, rgba(0,63,179,1) 76%);
+    padding: 30px 10px;
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
+    color: white;
+}
+.container{
+    margin: 0 auto;
+}
+
+
+/* Contenido de post */
+/* ############################################## */
+/* ############################################## */
+/* ############################################## */
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-around;
+    color: black;
+}
+.article{
+    width: 100%; /* Por defecto, el artículo toma todo el ancho */
+    max-width: 600px; /* Máximo ancho del artículo */
+}
+.article  img{
+    width: 100%;
+    height: auto;
+}
+.article table{
+  width: 100%;
+  height: auto;
+}
+.sidebar{
+    width: 100%; /* Por defecto, el sidebar toma todo el ancho */
+    height: max-content;
+    max-width: 350px; /* Máximo ancho del sidebar */
+    margin-top: 20px; /* Espacio arriba del sidebar para cuando esté debajo del artículo */
+    padding: 15px;
+    background-color: #fff;;
+    box-shadow: gray 2px 1px 3px;
+    border-radius: 15px;
+}
+.list-redes{
+    display: flex;
+}
+.fa-brands, .fa-solid{
+    color: black;
+    font-size: 30px;
+    margin: 0 10px;
+}
+.linkedin-color {
+    color: #0A66C2;
+}
+
+.facebook-color {
+    color: #1877F2;
+}
+
+.instagram-color {
+    color: #E4405F;
+}
+
+
+/* Footer */
+/* ########################################################################### */
+/* ########################################################################### */
+/* ########################################################################### */
+/* ############################################################################# */
+/* ######################          Footer        ############################### */
+/* ############################################################################# */
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 575px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar{
+        max-width: 100%;
+    }
+    .list-redes{
+        display: flex;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 575px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar{
+        max-width: 100%;
+    }
+    .list-redes{
+        display: flex;
+    }
+}

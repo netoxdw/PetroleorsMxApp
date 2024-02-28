@@ -6,6 +6,7 @@ from django.utils.text import slugify
 # Create your models here.
 class Categoria(models.Model):
     nombre = models.CharField('Nombre de la Categoría', max_length = 100, null = True, blank = False)
+    descripcion = models.CharField('Meta descripción', max_length = 160, null= True, blank= True)
     estado = models.BooleanField('Activada/No activada', default = True)
     fecha_creacion = models.DateField('Fecha de creación', auto_now = False, auto_now_add = True)
 
@@ -26,7 +27,7 @@ class Post(models.Model):
     autor = models.ForeignKey(Autor, on_delete = models.CASCADE)
     categoria = models.ForeignKey(Categoria, on_delete = models.CASCADE)
     estado = models.BooleanField('Publicado/No publicado', default = True)
-    fecha_creacion = models.DateField('Feacha de creación', auto_now = False, auto_now_add = True)
+    fecha_creacion = models.DateField('Fecha de creación', auto_now = False, auto_now_add = True)
 
     def save(self, *args, **kwargs):
         if not self.slug:

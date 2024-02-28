@@ -2,7 +2,7 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views. generic import ListView, DetailView
-from .models import Post, Categoria
+from .models import Post, Categoria, Autor
 # Create your views here.
 
 class IndexView(ListView):

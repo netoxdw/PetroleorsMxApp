@@ -4,6 +4,8 @@ from django.db import models
 class Autor(models.Model):
     nombres = models.CharField('Nombres de autor', max_length = 250, null = False, blank = False)
     apellidos = models.CharField('Apellidos de autor', max_length = 250, null = False, blank = False)
+    institucion = models.CharField('Escuela/Empresa', max_length= 100, null=True, blank=True)
+    nacionalidad = models.CharField('Nacionalidad', max_length=100, null=True, blank=True)
     linkedin = models.URLField('LinkedIn', null = True, blank = True)
     facebook = models.URLField('Facebook', null = True, blank = True)
     instagram = models.URLField('Instagram', null = True, blank = True)

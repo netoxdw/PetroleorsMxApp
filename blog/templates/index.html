@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="Explora nuestro blog de ingeniería petrolera para obtener insights profundos sobre perforación de pozos, terminación, producción de petróleo y simulación de yacimientos. Conéctate con las últimas técnicas y avances que están marcando el futuro de la industria energética">
+    
+
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@200;300;400&family=Quicksand:wght@700&family=Roboto&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="stylesheet" href="/static/css/footer.css">
 
     <script src="https://kit.fontawesome.com/ff3cb8b610.js" crossorigin="anonymous"></script>
 
-    <title>{% block title %}Petroleros mx {% endblock %}</title>
+    <title>{% block title %}PetrolerosMx | Últimas Tendencias en Ingeniería Petrolera{% endblock %}</title>
 </head>
 
 <body>
@@ -41,9 +45,8 @@
         </nav>
     </header>
 
-    {% block content %}
     <!-- Contenido de landing page -->
-    <header class="header">
+    <main class="main">
         <div class="description">
             <div class="cubo">
                 <figure class="cubo-img">
@@ -62,9 +65,7 @@
                     alt="pozo">
             </figure>
         </div>
-
-
-    </header>
+    </main>
 
     <section class="articles">
         
@@ -73,14 +74,20 @@
             {% if post_aprobados %}
 
             {% for post in post_aprobados%}
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">{{post.titulo}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted" style="text-transform: capitalize;">{{post.categoria}}</h6>
-                    <p class="card-text">{{post.descripcion}}</p>
-                    <a href="{% url 'post' post.categoria post.slug %}" class="btn btn-primary">Leer más</a>
+            <div class="card" style="width: 18rem; height: 12rem; display: flex; flex-direction: column;">
+                <div class="card-body d-flex flex-column" style="height: 100%;">
+                    <div style="flex: 1;">
+                        <h5 class="card-title">{{post.titulo}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted" style="text-transform: capitalize;">{{post.categoria}}</h6>
+                        <p class="card-text" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;">
+                            {{post.descripcion}}
+                        </p>
+                    </div>
+                    <a href="{% url 'post' post.categoria post.slug %}" class="btn btn-primary mt-auto" style="width: 100px;">Leer más</a>
                 </div>
             </div>
+            
+            
             {% endfor %}
 
             {% else %}
@@ -90,25 +97,54 @@
 
     </section>
 
-    {% endblock %}
-
     <!-- Footer -->
-    <footer class="footer">
-        <div class="autor">
-            <p>Información de Ingeniería Petrolera</p>
-        <p>Copyright &copy; PetrolerosMx</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>Quiénes somos</h6>
+                    <p class="text-justify"> <i> </i>
+                        PetrolerosMx es una comunidad dinámica de profesionales en ingeniería petrolera, unidos por su pasión por la investigación y el intercambio de conocimiento. Nos dedicamos a crear un espacio de colaboración y aprendizaje continuo, promoviendo la innovación y prácticas sostenibles en nuestra industria. Creemos que el futuro de la ingeniería petrolera se construye a través de la colaboración y el conocimiento compartido, comprometiéndonos a contribuir positivamente a la sociedad y al medio ambiente.
+                    </p>
+                </div>
 
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categorias</h6>
+                    <ul class="footer-links">
+                        <li><a href="">Perforación</a></li>
+                        <li><a href="">Yacimientos</a></li>
+                        <li><a href="">Producción</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Contacto</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">Ernesto Guevara Tapia</a></li>
+                        <li><a href="http://scanfcode.com/contact/">neto.guevara.tapia@gmail.com</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">CDMX, México.</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2024
+                        <a href="#">PetrolerosMx</a>.
+                    </p>
+                </div>
 
-        <div class="social" class="aside-box">
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="whatsApp" href="#"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
-
-
-
 
     <!-- Scrips de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
